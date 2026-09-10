@@ -35,6 +35,50 @@ class Matrix {
   const double& operator()(size_t row, size_t col) const {
     return data[row * size + col];
   }
+
+  void printMatrix() const {
+    for (size_t i = 0; i < data.size(); ++i) {
+      if ((i % size) == 0 && i != 0) {
+        std::cout << "\n";
+      }
+      std::cout << data[i] << " ";
+    }
+  }
+
+  Matrix multiply(const Matrix& other) const {
+    if (size != other.size) {
+      throw std::invalid_argument("The matrix sizes do not match!");
+    }
+
+    Matrix result(size);
+
+    // Порядок циклов i-k-j выбран для эфективности, помогает попадать в кеш.
+    for (size_t i = 0; i < size; ++i) {
+      for (size_t k = 0; k < size; ++k) {
+        double temp = operator()(i, k);
+        for (size_t j = 0; j < size; ++j) {
+          result(i, j) += temp * other(k, j);
+        }
+      }
+    }
+
+    return result;
+  }
+  void saveToFile(const std::string& path) const {
+    std::ofstream file(path);
+    if (!file.is_open()) {
+      throw std::runtime_error("Failed to open file for writing: " + path);
+    }
+
+    file << size << "\n";
+    file << std::setprecision(10);
+    for (size_t i = 0; i < size; ++i) {
+      for (size_t j = 0; j < size; ++j) {
+        file << operator()(i, j) << (j + 1 == size ? "" : " ");
+      }
+      file << "\n";
+    }
+  }
 };
 
 #endif
