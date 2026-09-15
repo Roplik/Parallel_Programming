@@ -1,4 +1,2 @@
 /build
-matrixA.txt
-matrixB.txt
-matrixC_res.txt
+labs/lab_1/scripts/*.txt

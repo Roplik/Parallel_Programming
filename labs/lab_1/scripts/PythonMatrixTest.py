@@ -6,10 +6,12 @@ import sys
 from pathlib import Path
 
 # Настройки
-MATRIX_SIZE = 500  
-FILE_A = "matrixA.txt"
-FILE_B = "matrixB.txt"
-FILE_OUT = "matrixC_res.txt"
+MATRIX_SIZE = 100
+
+SCRIPT_DIR = Path(__file__).parent.resolve()
+FILE_A = SCRIPT_DIR / "matrixA.txt"
+FILE_B = SCRIPT_DIR / "matrixB.txt"
+FILE_OUT = SCRIPT_DIR / "matrixC_res.txt"
 
 
 def get_preset_name():
@@ -56,11 +58,13 @@ def generate_random_matrix(size, min_val=-10.0, max_val=10.0):
 
 def save_matrix_to_file(filename, matrix):
     n = len(matrix)
-    with open(filename, "w") as f:
+    script_dir = Path(__file__).parent.resolve()
+    full_path = script_dir / filename
+
+    with open(full_path, "w") as f:
         f.write(f"{n}\n")
         for row in matrix:
             f.write(" ".join(f"{val:.10f}" for val in row) + "\n")
-
 
 def read_matrix_from_file(filename):
     with open(filename, "r") as f:
