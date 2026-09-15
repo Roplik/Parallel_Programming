@@ -2,8 +2,24 @@
     "version": 9,
     "configurePresets": [
         {
-            "name": "linux-debug",
+            "name": "linux-release",
             "displayName": "GCC Build",
+            "generator": "Ninja",
+            "binaryDir": "build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "gcc",
+                "CMAKE_CXX_COMPILER": "g++",
+                "CMAKE_BUILD_TYPE": "Release"
+            },
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "linux-debug",
+            "displayName": "GCC Build debug",
             "generator": "Ninja",
             "binaryDir": "build/${presetName}",
             "cacheVariables": {
@@ -72,9 +88,15 @@
     ],
     "buildPresets": [
         {
-            "name": "linux-debug",
+            "name": "linux-release",
             "description": "",
             "displayName": "GCC Build",
+            "configurePreset": "linux-release"
+        },
+        {
+            "name": "linux-debug",
+            "description": "",
+            "displayName": "GCC Build debug",
             "configurePreset": "linux-debug"
         },
         {

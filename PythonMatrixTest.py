@@ -48,7 +48,6 @@ def build_with_preset():
 
 
 def generate_random_matrix(size, min_val=-10.0, max_val=10.0):
-    random.seed(42)
     return [
         [random.uniform(min_val, max_val) for _ in range(size)]
         for _ in range(size)
