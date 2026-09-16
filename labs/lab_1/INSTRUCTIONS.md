@@ -39,7 +39,7 @@ cmake --build --preset windows-release
 
 Пример прямого запуска:
 ```PowerShell
-.\build\windows-release\labs\lab_1\pp_lab_1.exe labs\lab_1\matrixA.txt labs\lab_1\matrixB.txt labs\lab_1\matrixC_res.txt
+.\build\windows-release\labs\lab_1\pp_lab_1.exe labs\lab_1\scripts\matrixA.txt labs\lab_1\scripts\matrixB.txt labs\lab_1\scripts\matrixC_res.txt
 ```
 
 ## 5. Автоматизированное тестирование (`PythonMatrixTest.py`)
