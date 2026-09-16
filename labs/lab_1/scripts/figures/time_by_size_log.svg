@@ -1,0 +1,50 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg" style="background:#121212; font-family:sans-serif;">
+<text x="400.0" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#e0e0e0">Sequential Execution Time (Log Scale)</text>
+<line x1="90" y1="440.0" x2="760" y2="440.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="444.0" text-anchor="end" font-size="12" fill="#aaaaaa">10^-2.07</text>
+<line x1="90" y1="364.0" x2="760" y2="364.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="368.0" text-anchor="end" font-size="12" fill="#aaaaaa">10^-1.47</text>
+<line x1="90" y1="288.0" x2="760" y2="288.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="292.0" text-anchor="end" font-size="12" fill="#aaaaaa">10^-0.86</text>
+<line x1="90" y1="212.0" x2="760" y2="212.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="216.0" text-anchor="end" font-size="12" fill="#aaaaaa">10^-0.26</text>
+<line x1="90" y1="136.0" x2="760" y2="136.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="140.0" text-anchor="end" font-size="12" fill="#aaaaaa">10^0.34</text>
+<line x1="90" y1="60.0" x2="760" y2="60.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="64.0" text-anchor="end" font-size="12" fill="#aaaaaa">10^0.94</text>
+<line x1="90.0" y1="440" x2="90.0" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="90.0" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">100</text>
+<line x1="164.44444444444446" y1="440" x2="164.44444444444446" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="164.44444444444446" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">200</text>
+<line x1="238.88888888888889" y1="440" x2="238.88888888888889" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="238.88888888888889" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">300</text>
+<line x1="313.3333333333333" y1="440" x2="313.3333333333333" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="313.3333333333333" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">400</text>
+<line x1="387.77777777777777" y1="440" x2="387.77777777777777" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="387.77777777777777" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">500</text>
+<line x1="462.22222222222223" y1="440" x2="462.22222222222223" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="462.22222222222223" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">600</text>
+<line x1="536.6666666666666" y1="440" x2="536.6666666666666" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="536.6666666666666" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">700</text>
+<line x1="611.1111111111111" y1="440" x2="611.1111111111111" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="611.1111111111111" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">800</text>
+<line x1="685.5555555555555" y1="440" x2="685.5555555555555" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="685.5555555555555" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">900</text>
+<line x1="760.0" y1="440" x2="760.0" y2="445" stroke="#555555" stroke-width="1"/>
+<text x="760.0" y="460" text-anchor="middle" font-size="12" fill="#aaaaaa">1000</text>
+<line x1="90" y1="440" x2="760" y2="440" stroke="#555555" stroke-width="2"/>
+<line x1="90" y1="60" x2="90" y2="440" stroke="#555555" stroke-width="2"/>
+<text x="400.0" y="485" text-anchor="middle" font-size="14" fill="#e0e0e0">Matrix Size N (NxN)</text>
+<text x="25" y="250.0" text-anchor="middle" font-size="14" fill="#e0e0e0" transform="rotate(-90 25 250.0)">Log10(Time in seconds)</text>
+<polyline fill="none" stroke="#00d2ff" stroke-width="3" points="90.0,440.0 164.4,325.1 238.9,258.6 313.3,211.4 387.8,174.6 462.2,142.6 536.7,118.4 611.1,94.8 685.6,77.2 760.0,60.0"/>
+<circle cx="90.0" cy="440.0" r="4" fill="#00d2ff"/>
+<circle cx="164.4" cy="325.1" r="4" fill="#00d2ff"/>
+<circle cx="238.9" cy="258.6" r="4" fill="#00d2ff"/>
+<circle cx="313.3" cy="211.4" r="4" fill="#00d2ff"/>
+<circle cx="387.8" cy="174.6" r="4" fill="#00d2ff"/>
+<circle cx="462.2" cy="142.6" r="4" fill="#00d2ff"/>
+<circle cx="536.7" cy="118.4" r="4" fill="#00d2ff"/>
+<circle cx="611.1" cy="94.8" r="4" fill="#00d2ff"/>
+<circle cx="685.6" cy="77.2" r="4" fill="#00d2ff"/>
+<circle cx="760.0" cy="60.0" r="4" fill="#00d2ff"/>
+</svg>

@@ -1,18 +1,18 @@
-import os
 import platform
 import random
 import subprocess
 import sys
+import re
 from pathlib import Path
 
 # Настройки
-MATRIX_SIZE = 100
+SIZES = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000]
 
 SCRIPT_DIR = Path(__file__).parent.resolve()
 FILE_A = SCRIPT_DIR / "matrixA.txt"
 FILE_B = SCRIPT_DIR / "matrixB.txt"
 FILE_OUT = SCRIPT_DIR / "matrixC_res.txt"
-
+RESULTS_CSV = SCRIPT_DIR / "results.csv"
 
 def get_preset_name():
     system = platform.system()
@@ -28,7 +28,7 @@ def get_preset_name():
 
 def get_executable_path(preset_name):
     exe_name = "pp_lab_1.exe" if platform.system() == "Windows" else "pp_lab_1"
-    return Path("build") / preset_name / exe_name
+    return Path("build") / preset_name / "labs/lab_1" / exe_name
 
 
 def build_with_preset():
@@ -90,7 +90,7 @@ def python_matrix_multiply(A, B):
 
 
 def verify_results(cpp_mat, reference_mat, tol=1e-5):
-    #tol=1e-5 это разница в 10^-5
+    # tol=1e-5 это разница в 10^-5
     n = len(cpp_mat)
     max_diff = 0.0
 
@@ -106,42 +106,63 @@ def verify_results(cpp_mat, reference_mat, tol=1e-5):
 
 def main():
     exe_path = build_with_preset()
-
+    print("EXE PATH: ", exe_path)
     if not exe_path.exists():
         print(f"Error: Executable not found at {exe_path}")
         sys.exit(1)
 
-    print(
-        f"\nSTEP 3: Generating Input Matrices ({MATRIX_SIZE}x{MATRIX_SIZE})"
-    )
-    mat_A = generate_random_matrix(MATRIX_SIZE)
-    mat_B = generate_random_matrix(MATRIX_SIZE)
-
-    save_matrix_to_file(FILE_A, mat_A)
-    save_matrix_to_file(FILE_B, mat_B)
-
+    results = []
     print(f"\nSTEP 4: Running C++ Program")
-    run_cmd = [str(exe_path), FILE_A, FILE_B, FILE_OUT]
-    if subprocess.run(run_cmd).returncode != 0:
-        print("Error: C++ execution failed!")
-        sys.exit(1)
+    print(f"{'N':>6} | {'Time (s)':>10} | {'GFLOPS':>10} | {'Status':>8}")
+    print("-" * 42)
 
-    print("\nSTEP 5: Verifying Results")
-    cpp_result = read_matrix_from_file(FILE_OUT)
+    for MATRIX_SIZE in SIZES:
+        mat_A = generate_random_matrix(MATRIX_SIZE)
+        mat_B = generate_random_matrix(MATRIX_SIZE)
 
-    python_result = python_matrix_multiply(mat_A, mat_B)
+        save_matrix_to_file(FILE_A, mat_A)
+        save_matrix_to_file(FILE_B, mat_B)
 
-    is_correct, max_diff = verify_results(cpp_result, python_result)
+        run_cmd = [str(exe_path), str(FILE_A), str(FILE_B), str(FILE_OUT)]
+        res = subprocess.run(run_cmd, capture_output=True, text=True)
+        #print(res.stdout)
+        if res.returncode != 0:
+            print(f"Error executing C++ program for N={MATRIX_SIZE}")
+            print(res.stderr)
+            continue
 
-    print("\n========================================")
-    if is_correct:
-        print("VERIFICATION SUCCESSFUL! C++ matches Python.")
-        print(f"Max Absolute Difference: {max_diff:.2e}")
-    else:
-        print("VERIFICATION FAILED! Results do NOT match.")
-        print(f"Max Absolute Difference: {max_diff:.2e}")
-    print("========================================\n")
 
+        stdout = res.stdout
+        match_time = re.search(r"Execution Time\s+:\s+([\d\.]+)", stdout)
+        match_gflops = re.search(r"Performance\s+:\s+([\d\.]+)", stdout)
+        if match_time and match_gflops:
+            cpp_time = float(match_time.group(1))
+            gflops = float(match_gflops.group(1))
+        else:
+            print(f"Failed to parse time output from C++ binary for N={MATRIX_SIZE}")
+            continue
+
+
+        cpp_result = read_matrix_from_file(FILE_OUT)
+
+        python_result = python_matrix_multiply(mat_A, mat_B)
+
+        is_correct, max_diff = verify_results(cpp_result, python_result)
+
+        flops = 2 * (MATRIX_SIZE**3)
+        gflops = (flops / cpp_time) / 1e9 if cpp_time > 0 else 0
+
+        status = "OK" if is_correct else "FAIL"
+        print(
+            f"{MATRIX_SIZE:6d} | {cpp_time:10.4f} | {gflops:10.4f} | {max_diff:12.2e} | {status:>8}"
+        )
+
+        results.append((MATRIX_SIZE, cpp_time, gflops, max_diff))
+
+    with open(RESULTS_CSV, "w") as f:
+        f.write("N,Time_sec,GFLOPS,Max_Diff\n")
+        for r in results:
+            f.write(f"{r[0]},{r[1]:.6f},{r[2]:.4f},{r[3]:.2e}\n")
 
 if __name__ == "__main__":
     main()
