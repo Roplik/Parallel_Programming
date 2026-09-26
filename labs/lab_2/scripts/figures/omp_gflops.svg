@@ -1,0 +1,97 @@
+<svg width="850" height="520" xmlns="http://www.w3.org/2000/svg" style="background:#121212; font-family:sans-serif;">
+<text x="425.0" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#e0e0e0">Performance (GFLOPS) vs Matrix Size (OpenMP)</text>
+<line x1="90" y1="460.0" x2="690" y2="460.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="464.0" text-anchor="end" font-size="12" fill="#aaaaaa">0.00</text>
+<line x1="90" y1="393.33333333333337" x2="690" y2="393.33333333333337" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="397.33333333333337" text-anchor="end" font-size="12" fill="#aaaaaa">0.48</text>
+<line x1="90" y1="326.6666666666667" x2="690" y2="326.6666666666667" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="330.6666666666667" text-anchor="end" font-size="12" fill="#aaaaaa">0.95</text>
+<line x1="90" y1="260.0" x2="690" y2="260.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="264.0" text-anchor="end" font-size="12" fill="#aaaaaa">1.43</text>
+<line x1="90" y1="193.33333333333337" x2="690" y2="193.33333333333337" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="197.33333333333337" text-anchor="end" font-size="12" fill="#aaaaaa">1.91</text>
+<line x1="90" y1="126.66666666666669" x2="690" y2="126.66666666666669" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="130.66666666666669" text-anchor="end" font-size="12" fill="#aaaaaa">2.39</text>
+<line x1="90" y1="60.0" x2="690" y2="60.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="64.0" text-anchor="end" font-size="12" fill="#aaaaaa">2.86</text>
+<line x1="90.0" y1="460" x2="90.0" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="90.0" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">100</text>
+<line x1="156.66666666666666" y1="460" x2="156.66666666666666" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="156.66666666666666" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">200</text>
+<line x1="223.33333333333331" y1="460" x2="223.33333333333331" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="223.33333333333331" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">300</text>
+<line x1="290.0" y1="460" x2="290.0" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="290.0" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">400</text>
+<line x1="356.66666666666663" y1="460" x2="356.66666666666663" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="356.66666666666663" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">500</text>
+<line x1="423.33333333333337" y1="460" x2="423.33333333333337" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="423.33333333333337" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">600</text>
+<line x1="490.0" y1="460" x2="490.0" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="490.0" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">700</text>
+<line x1="556.6666666666667" y1="460" x2="556.6666666666667" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="556.6666666666667" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">800</text>
+<line x1="623.3333333333333" y1="460" x2="623.3333333333333" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="623.3333333333333" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">900</text>
+<line x1="690.0" y1="460" x2="690.0" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="690.0" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">1000</text>
+<line x1="90" y1="460" x2="690" y2="460" stroke="#555555" stroke-width="2"/>
+<line x1="90" y1="60" x2="90" y2="460" stroke="#555555" stroke-width="2"/>
+<text x="390.0" y="505" text-anchor="middle" font-size="14" fill="#e0e0e0">Matrix Size N (NxN)</text>
+<text x="25" y="260.0" text-anchor="middle" font-size="14" fill="#e0e0e0" transform="rotate(-90 25 260.0)">GFLOPS</text>
+<polyline fill="none" stroke="#ff5252" stroke-width="2.5" points="90.0,410.0 156.7,410.6 223.3,410.4 290.0,411.0 356.7,409.9 423.3,409.9 490.0,409.8 556.7,409.7 623.3,409.7 690.0,409.8"/>
+<circle cx="90.0" cy="410.0" r="3.5" fill="#ff5252"/>
+<circle cx="156.7" cy="410.6" r="3.5" fill="#ff5252"/>
+<circle cx="223.3" cy="410.4" r="3.5" fill="#ff5252"/>
+<circle cx="290.0" cy="411.0" r="3.5" fill="#ff5252"/>
+<circle cx="356.7" cy="409.9" r="3.5" fill="#ff5252"/>
+<circle cx="423.3" cy="409.9" r="3.5" fill="#ff5252"/>
+<circle cx="490.0" cy="409.8" r="3.5" fill="#ff5252"/>
+<circle cx="556.7" cy="409.7" r="3.5" fill="#ff5252"/>
+<circle cx="623.3" cy="409.7" r="3.5" fill="#ff5252"/>
+<circle cx="690.0" cy="409.8" r="3.5" fill="#ff5252"/>
+<line x1="710" y1="70" x2="730" y2="70" stroke="#ff5252" stroke-width="3"/>
+<circle cx="720" cy="70" r="3.5" fill="#ff5252"/>
+<text x="738" y="74" font-size="12" fill="#e0e0e0">1 thread(s)</text>
+<polyline fill="none" stroke="#ffb142" stroke-width="2.5" points="90.0,367.2 156.7,363.1 223.3,362.1 290.0,361.9 356.7,361.1 423.3,361.0 490.0,360.0 556.7,359.9 623.3,361.7 690.0,364.4"/>
+<circle cx="90.0" cy="367.2" r="3.5" fill="#ffb142"/>
+<circle cx="156.7" cy="363.1" r="3.5" fill="#ffb142"/>
+<circle cx="223.3" cy="362.1" r="3.5" fill="#ffb142"/>
+<circle cx="290.0" cy="361.9" r="3.5" fill="#ffb142"/>
+<circle cx="356.7" cy="361.1" r="3.5" fill="#ffb142"/>
+<circle cx="423.3" cy="361.0" r="3.5" fill="#ffb142"/>
+<circle cx="490.0" cy="360.0" r="3.5" fill="#ffb142"/>
+<circle cx="556.7" cy="359.9" r="3.5" fill="#ffb142"/>
+<circle cx="623.3" cy="361.7" r="3.5" fill="#ffb142"/>
+<circle cx="690.0" cy="364.4" r="3.5" fill="#ffb142"/>
+<line x1="710" y1="95" x2="730" y2="95" stroke="#ffb142" stroke-width="3"/>
+<circle cx="720" cy="95" r="3.5" fill="#ffb142"/>
+<text x="738" y="99" font-size="12" fill="#e0e0e0">2 thread(s)</text>
+<polyline fill="none" stroke="#2ed573" stroke-width="2.5" points="90.0,315.1 156.7,281.1 223.3,271.5 290.0,270.8 356.7,264.9 423.3,266.2 490.0,264.5 556.7,264.8 623.3,263.9 690.0,276.8"/>
+<circle cx="90.0" cy="315.1" r="3.5" fill="#2ed573"/>
+<circle cx="156.7" cy="281.1" r="3.5" fill="#2ed573"/>
+<circle cx="223.3" cy="271.5" r="3.5" fill="#2ed573"/>
+<circle cx="290.0" cy="270.8" r="3.5" fill="#2ed573"/>
+<circle cx="356.7" cy="264.9" r="3.5" fill="#2ed573"/>
+<circle cx="423.3" cy="266.2" r="3.5" fill="#2ed573"/>
+<circle cx="490.0" cy="264.5" r="3.5" fill="#2ed573"/>
+<circle cx="556.7" cy="264.8" r="3.5" fill="#2ed573"/>
+<circle cx="623.3" cy="263.9" r="3.5" fill="#2ed573"/>
+<circle cx="690.0" cy="276.8" r="3.5" fill="#2ed573"/>
+<line x1="710" y1="120" x2="730" y2="120" stroke="#2ed573" stroke-width="3"/>
+<circle cx="720" cy="120" r="3.5" fill="#2ed573"/>
+<text x="738" y="124" font-size="12" fill="#e0e0e0">4 thread(s)</text>
+<polyline fill="none" stroke="#1e90ff" stroke-width="2.5" points="90.0,298.4 156.7,121.2 223.3,115.5 290.0,90.9 356.7,92.1 423.3,86.7 490.0,84.3 556.7,80.7 623.3,79.0 690.0,163.4"/>
+<circle cx="90.0" cy="298.4" r="3.5" fill="#1e90ff"/>
+<circle cx="156.7" cy="121.2" r="3.5" fill="#1e90ff"/>
+<circle cx="223.3" cy="115.5" r="3.5" fill="#1e90ff"/>
+<circle cx="290.0" cy="90.9" r="3.5" fill="#1e90ff"/>
+<circle cx="356.7" cy="92.1" r="3.5" fill="#1e90ff"/>
+<circle cx="423.3" cy="86.7" r="3.5" fill="#1e90ff"/>
+<circle cx="490.0" cy="84.3" r="3.5" fill="#1e90ff"/>
+<circle cx="556.7" cy="80.7" r="3.5" fill="#1e90ff"/>
+<circle cx="623.3" cy="79.0" r="3.5" fill="#1e90ff"/>
+<circle cx="690.0" cy="163.4" r="3.5" fill="#1e90ff"/>
+<line x1="710" y1="145" x2="730" y2="145" stroke="#1e90ff" stroke-width="3"/>
+<circle cx="720" cy="145" r="3.5" fill="#1e90ff"/>
+<text x="738" y="149" font-size="12" fill="#e0e0e0">8 thread(s)</text>
+</svg>
