@@ -1,0 +1,103 @@
+<svg width="850" height="520" xmlns="http://www.w3.org/2000/svg" style="background:#121212; font-family:sans-serif;">
+<text x="425.0" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#e0e0e0">Efficiency vs Matrix Size (MPI)</text>
+<line x1="90" y1="460.0" x2="690" y2="460.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="464.0" text-anchor="end" font-size="12" fill="#aaaaaa">0.00</text>
+<line x1="90" y1="393.33333333333337" x2="690" y2="393.33333333333337" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="397.33333333333337" text-anchor="end" font-size="12" fill="#aaaaaa">0.23</text>
+<line x1="90" y1="326.6666666666667" x2="690" y2="326.6666666666667" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="330.6666666666667" text-anchor="end" font-size="12" fill="#aaaaaa">0.46</text>
+<line x1="90" y1="260.0" x2="690" y2="260.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="264.0" text-anchor="end" font-size="12" fill="#aaaaaa">0.69</text>
+<line x1="90" y1="193.33333333333337" x2="690" y2="193.33333333333337" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="197.33333333333337" text-anchor="end" font-size="12" fill="#aaaaaa">0.92</text>
+<line x1="90" y1="126.66666666666669" x2="690" y2="126.66666666666669" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="130.66666666666669" text-anchor="end" font-size="12" fill="#aaaaaa">1.16</text>
+<line x1="90" y1="60.0" x2="690" y2="60.0" stroke="#2a2a2a" stroke-width="1"/>
+<text x="80" y="64.0" text-anchor="end" font-size="12" fill="#aaaaaa">1.39</text>
+<line x1="90.0" y1="460" x2="90.0" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="90.0" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">100</text>
+<line x1="121.57894736842105" y1="460" x2="121.57894736842105" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="121.57894736842105" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">200</text>
+<line x1="184.73684210526315" y1="460" x2="184.73684210526315" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="184.73684210526315" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">400</text>
+<line x1="247.89473684210526" y1="460" x2="247.89473684210526" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="247.89473684210526" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">600</text>
+<line x1="311.0526315789474" y1="460" x2="311.0526315789474" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="311.0526315789474" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">800</text>
+<line x1="374.2105263157895" y1="460" x2="374.2105263157895" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="374.2105263157895" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">1000</text>
+<line x1="437.3684210526316" y1="460" x2="437.3684210526316" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="437.3684210526316" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">1200</text>
+<line x1="500.5263157894737" y1="460" x2="500.5263157894737" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="500.5263157894737" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">1400</text>
+<line x1="563.6842105263158" y1="460" x2="563.6842105263158" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="563.6842105263158" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">1600</text>
+<line x1="626.8421052631579" y1="460" x2="626.8421052631579" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="626.8421052631579" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">1800</text>
+<line x1="690.0" y1="460" x2="690.0" y2="465" stroke="#555555" stroke-width="1"/>
+<text x="690.0" y="480" text-anchor="middle" font-size="11" fill="#aaaaaa">2000</text>
+<line x1="90" y1="460" x2="690" y2="460" stroke="#555555" stroke-width="2"/>
+<line x1="90" y1="60" x2="90" y2="460" stroke="#555555" stroke-width="2"/>
+<text x="390.0" y="505" text-anchor="middle" font-size="14" fill="#e0e0e0">Matrix Size N (NxN)</text>
+<text x="25" y="260.0" text-anchor="middle" font-size="14" fill="#e0e0e0" transform="rotate(-90 25 260.0)">Efficiency (E_p)</text>
+<polyline fill="none" stroke="#ff5252" stroke-width="2.5" points="90.0,171.4 121.6,171.4 184.7,171.4 247.9,171.4 311.1,171.4 374.2,171.4 437.4,171.4 500.5,171.4 563.7,171.4 626.8,171.4 690.0,171.4"/>
+<circle cx="90.0" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="121.6" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="184.7" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="247.9" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="311.1" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="374.2" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="437.4" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="500.5" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="563.7" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="626.8" cy="171.4" r="3.5" fill="#ff5252"/>
+<circle cx="690.0" cy="171.4" r="3.5" fill="#ff5252"/>
+<line x1="710" y1="70" x2="730" y2="70" stroke="#ff5252" stroke-width="3"/>
+<circle cx="720" cy="70" r="3.5" fill="#ff5252"/>
+<text x="738" y="74" font-size="12" fill="#e0e0e0">1 process(es)</text>
+<polyline fill="none" stroke="#ffb142" stroke-width="2.5" points="90.0,79.0 121.6,93.5 184.7,180.1 247.9,185.8 311.1,185.8 374.2,185.8 437.4,194.5 500.5,217.6 563.7,214.7 626.8,203.1 690.0,194.5"/>
+<circle cx="90.0" cy="79.0" r="3.5" fill="#ffb142"/>
+<circle cx="121.6" cy="93.5" r="3.5" fill="#ffb142"/>
+<circle cx="184.7" cy="180.1" r="3.5" fill="#ffb142"/>
+<circle cx="247.9" cy="185.8" r="3.5" fill="#ffb142"/>
+<circle cx="311.1" cy="185.8" r="3.5" fill="#ffb142"/>
+<circle cx="374.2" cy="185.8" r="3.5" fill="#ffb142"/>
+<circle cx="437.4" cy="194.5" r="3.5" fill="#ffb142"/>
+<circle cx="500.5" cy="217.6" r="3.5" fill="#ffb142"/>
+<circle cx="563.7" cy="214.7" r="3.5" fill="#ffb142"/>
+<circle cx="626.8" cy="203.1" r="3.5" fill="#ffb142"/>
+<circle cx="690.0" cy="194.5" r="3.5" fill="#ffb142"/>
+<line x1="710" y1="95" x2="730" y2="95" stroke="#ffb142" stroke-width="3"/>
+<circle cx="720" cy="95" r="3.5" fill="#ffb142"/>
+<text x="738" y="99" font-size="12" fill="#e0e0e0">2 process(es)</text>
+<polyline fill="none" stroke="#2ed573" stroke-width="2.5" points="90.0,188.7 121.6,136.8 184.7,191.6 247.9,223.3 311.1,232.0 374.2,301.3 437.4,309.9 500.5,284.0 563.7,284.0 626.8,292.6 690.0,281.1"/>
+<circle cx="90.0" cy="188.7" r="3.5" fill="#2ed573"/>
+<circle cx="121.6" cy="136.8" r="3.5" fill="#2ed573"/>
+<circle cx="184.7" cy="191.6" r="3.5" fill="#2ed573"/>
+<circle cx="247.9" cy="223.3" r="3.5" fill="#2ed573"/>
+<circle cx="311.1" cy="232.0" r="3.5" fill="#2ed573"/>
+<circle cx="374.2" cy="301.3" r="3.5" fill="#2ed573"/>
+<circle cx="437.4" cy="309.9" r="3.5" fill="#2ed573"/>
+<circle cx="500.5" cy="284.0" r="3.5" fill="#2ed573"/>
+<circle cx="563.7" cy="284.0" r="3.5" fill="#2ed573"/>
+<circle cx="626.8" cy="292.6" r="3.5" fill="#2ed573"/>
+<circle cx="690.0" cy="281.1" r="3.5" fill="#2ed573"/>
+<line x1="710" y1="120" x2="730" y2="120" stroke="#2ed573" stroke-width="3"/>
+<circle cx="720" cy="120" r="3.5" fill="#2ed573"/>
+<text x="738" y="124" font-size="12" fill="#e0e0e0">4 process(es)</text>
+<polyline fill="none" stroke="#1e90ff" stroke-width="2.5" points="90.0,284.0 121.6,237.8 184.7,234.9 247.9,298.4 311.1,327.2 374.2,335.9 437.4,321.5 500.5,321.5 563.7,304.2 626.8,304.2 690.0,333.0"/>
+<circle cx="90.0" cy="284.0" r="3.5" fill="#1e90ff"/>
+<circle cx="121.6" cy="237.8" r="3.5" fill="#1e90ff"/>
+<circle cx="184.7" cy="234.9" r="3.5" fill="#1e90ff"/>
+<circle cx="247.9" cy="298.4" r="3.5" fill="#1e90ff"/>
+<circle cx="311.1" cy="327.2" r="3.5" fill="#1e90ff"/>
+<circle cx="374.2" cy="335.9" r="3.5" fill="#1e90ff"/>
+<circle cx="437.4" cy="321.5" r="3.5" fill="#1e90ff"/>
+<circle cx="500.5" cy="321.5" r="3.5" fill="#1e90ff"/>
+<circle cx="563.7" cy="304.2" r="3.5" fill="#1e90ff"/>
+<circle cx="626.8" cy="304.2" r="3.5" fill="#1e90ff"/>
+<circle cx="690.0" cy="333.0" r="3.5" fill="#1e90ff"/>
+<line x1="710" y1="145" x2="730" y2="145" stroke="#1e90ff" stroke-width="3"/>
+<circle cx="720" cy="145" r="3.5" fill="#1e90ff"/>
+<text x="738" y="149" font-size="12" fill="#e0e0e0">8 process(es)</text>
+</svg>

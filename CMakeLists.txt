@@ -4,3 +4,4 @@ project(Parallel_programming)
 
 add_subdirectory(labs/lab_1)
 add_subdirectory(labs/lab_2)
+add_subdirectory(labs/lab_4)

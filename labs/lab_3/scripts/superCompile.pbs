@@ -1,0 +1,70 @@
+#!/bin/bash
+#SBATCH --job-name=matMulMPI_bench
+#SBATCH --time=00:30:00
+#SBATCH --partition=batch
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
+
+module load intel/mpi4
+
+EXE_PATH="./matMulMPI"
+RESULTS_CSV="results.csv"
+
+# Записываем шапку CSV-файла
+echo "N,Threads,Time_sec,GFLOPS,Speedup,Efficiency,Status" > $RESULTS_CSV
+
+SIZES=(100 200 400 600 800 1000 1200 1400 1600 1800 2000)
+THREADS_LIST=(1 2 4 8)
+
+echo "=== СТАРТ СЕРИИ ЭКСПЕРИМЕНТОВ ==="
+
+for size in "${SIZES[@]}"
+do
+    echo "================ Matrix Size N = $size ================"
+    time_t1="1.0"
+
+    for threads in "${THREADS_LIST[@]}"
+    do
+        echo "Запуск для N=$size на $threads процессах..."
+        
+        # Запускаем программу и получаем вывод
+        stdout=$(srun -n $threads $EXE_PATH $size)
+        
+        # Вырезаем чистое время (удаляем пробелы и слово 'seconds')
+        cpp_time=$(echo "$stdout" | grep "Execution Time" | tr -d ' ' | cut -d':' -f2 | sed 's/seconds//g')
+        
+        if [ -z "$cpp_time" ]; then cpp_time="0.0"; fi
+
+        # Если это первый поток (1 ядро), фиксируем базовое время T1 для расчета ускорения
+        if [ "$threads" -eq 1 ]; then
+            time_t1=$cpp_time
+        fi
+
+        # Считаем параллельные метрики через стандартный калькулятор bc
+        if (( $(echo "$cpp_time > 0" | bc -l) )); then
+            # Ускорение = T1 / Tp
+            speedup=$(echo "$time_t1 / $cpp_time" | bc -l)
+            # Эффективность = Ускорение / Число процессов
+            efficiency=$(echo "$speedup / $threads" | bc -l)
+            # GFLOPS = (2 * N^3) / (Время * 10^9)
+            gflops=$(echo "(2 * $size * $size * $size) / ($cpp_time * 1000000000)" | bc -l)
+        else
+            speedup="1.0"
+            efficiency="1.0"
+            gflops="0.0"
+        fi
+
+        # Форматируем числа, чтобы в CSV не было бесконечных хвостов
+        speedup_fmt=$(printf "%.2f" $speedup 2>/dev/null || echo "1.00")
+        efficiency_fmt=$(printf "%.2f" $efficiency 2>/dev/null || echo "1.00")
+        gflops_fmt=$(printf "%.4f" $gflops 2>/dev/null || echo "0.0000")
+
+        # Записываем все вычисленные данные в итоговый файл
+        echo "$size,$threads,$cpp_time,$gflops_fmt,$speedup_fmt,$efficiency_fmt,OK" >> $RESULTS_CSV
+        
+        echo "Потоков: $threads | Время: $cpp_time сек | GFLOPS: $gflops_fmt | Ускорение: $speedup_fmt"
+    done
+done
+
+echo "=== ВСЕ ТЕСТЫ ЗАВЕРШЕНЫ ==="
+echo "[SUCCESS] Результаты сохранены в файл: $RESULTS_CSV"
